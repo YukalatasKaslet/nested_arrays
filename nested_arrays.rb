@@ -63,13 +63,6 @@ def nested_arrays
           array_tablero_position[i][k] = "P-N"
         end
 
-      # else
-      #   if j % 2 != 0 && i % 2 != 0 
-      #     array_tablero_position[i][j] = "/////////"
-
-      #   elsif j % 2 == 0 && i % 2 == 0
-      #     array_tablero_position[i][j] = "/////////" 
-
         else
           array_tablero_position[i][j] = "   " 
 
@@ -79,9 +72,8 @@ def nested_arrays
   end
 
 
-
+#string para dar formato
   x = ""
-  y = "|"
   for n in 1..47
     if n % 6 == 0
       x += "+"
@@ -93,13 +85,13 @@ def nested_arrays
 
 
 
-
+#Imprime tablero
   array_tablero_position.each do |e| 
     p x
     e.each do |pieza|
-      printf "#{y} #{pieza} "
+      printf "| #{pieza} "
     end
-    printf "#{y}"
+    printf "|"
     printf "\n"
   end
   p x
@@ -121,13 +113,12 @@ table = [ ["Nombre",      "Edad",   "Genero",       "Grupo",    "Calificaciones"
 nested_arrays
 
 
-# p "---------------------------------"
-# p table[0][4]  == "Calificaciones"
-# p table[2][1]  == 12
-# p table[2][2]  == "Femenino"
-# p table[3][3]  == "Primero"
-# p table[3][4]  == [8, 7, 7, 9, 8]
-# p table[4][4][2]  == 6
+p table[0][4]  == "Calificaciones"
+p table[2][1]  == 12
+p table[2][2]  == "Femenino"
+p table[3][3]  == "Primero"
+p table[3][4]  == [8, 7, 7, 9, 8]
+p table[4][4][2]  == 6
 
 
 
